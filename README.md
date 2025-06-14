@@ -153,8 +153,10 @@ Download the Blackfyre plugin release file in `/opt`:
 
 ```bash
 cd /opt
-wget https://github.com/jonescyber-ai/Blackfyre/releases/download/v1.0.1/blackfyre-ghidra-plugin-v1.0.1.zip
+wget https://github.com/jonescyber-ai/Blackfyre/releases/download/v1.0.1/ghidra_11.2.1_PUBLIC_20250111_Blackfyre.zip
 ```
+
+ 
 
 #### Install the Plugin in Ghidra
 

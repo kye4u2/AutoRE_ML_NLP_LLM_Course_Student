@@ -118,11 +118,6 @@ chmod a+x Blackfyre/examples/ghidra/example_generate_bcc_headless.sh
 
 ---
 
-
-Certainly. Here’s the revised section, reflecting that you should set permissions on `/opt`, download and unzip Ghidra there, and noting the assumption that this is a VM with a single user.
-
----
-
 ## Ghidra 11.2.1 and Blackfyre Plugin Installation (Required for Lab 0)
 
 The following steps are **required for Lab 0**.
@@ -144,7 +139,7 @@ Set ownership of `/opt` so your user can manage the Ghidra installation (recomme
 sudo chown -R "$USER":"$USER" /opt
 ```
 
-Download Ghidra 11.2.1 to `/opt`:
+Download and unzip Ghidra 11.2.1 in `/opt`:
 
 ```bash
 cd /opt
@@ -152,23 +147,29 @@ wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_1
 unzip ghidra_11.2.1_PUBLIC_20241105.zip
 ```
 
-### 3. Download and Install the Blackfyre Plugin for Ghidra
+### 3. Download and Install the Blackfyre Plugin
 
-Follow the instructions and download the plugin from:
+Download the Blackfyre plugin release file in `/opt`:
 
-* [Blackfyre Ghidra Plugin v1.0.1 Release and Installation Instructions](https://github.com/jonescyber-ai/Blackfyre/releases/tag/v1.0.1)
+```bash
+cd /opt
+wget https://github.com/jonescyber-ai/Blackfyre/releases/download/v1.0.1/blackfyre-ghidra-plugin-v1.0.1.zip
+```
 
-Complete the plugin installation as described in the release notes.
+#### Install the Plugin in Ghidra
+
+1. Open Ghidra (from `/opt/ghidra_11.2.1_PUBLIC/ghidraRun`).
+2. In the Ghidra menu, go to **File → Install Extensions**.
+3. Click "Add" or "Install" and select the plugin file:
+   `/opt/blackfyre-ghidra-plugin-v1.0.1.zip`
+4. After installation, ensure the plugin is **enabled** in the Extensions manager.
+5. Restart Ghidra if prompted.
 
 ---
 
 **Note:** These steps assume you are the only user on the VM.
 If you are working in a multi-user environment, consult your administrator before changing permissions in `/opt`.
 
-Let me know if you need the Ghidra plugin installation steps detailed inline or have other environment constraints to document.
-
-
----
 
 ## Additional Notes
 

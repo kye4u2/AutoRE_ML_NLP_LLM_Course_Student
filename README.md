@@ -1,5 +1,10 @@
 # AutoRE\_ML\_NLP\_LLM\_Course\_Student
 
+## Disclaimer:
+Installation and use of this lab environment is _**only supported on AMD64 (x86_64) systems**_.
+Due to dependencies such as VEXIR used in Blackfyre, installation on ARM-based systems (e.g., Apple Silicon/M1, Raspberry Pi) is not supported and may require significant troubleshooting.
+As noted in the course requirements, please ensure you are using an AMD64-based virtual machine or host environment for the course labs.
+
 ## Lab Environment Setup
 
 This repository provides the environment and instructions necessary for the hands-on portion of the course. Please follow each step carefully to ensure your setup matches the course requirements.

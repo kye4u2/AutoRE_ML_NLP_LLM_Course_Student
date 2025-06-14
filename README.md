@@ -118,6 +118,45 @@ chmod a+x Blackfyre/examples/ghidra/example_generate_bcc_headless.sh
 
 ---
 
+
+## Ghidra 11.2.1 and Blackfyre Plugin Installation (Required for Lab 0)
+
+The following steps are required to complete **Lab 0**. Please follow them if you have not already set up Ghidra and the Blackfyre plugin.
+
+### 1. Install JDK 21
+
+Ghidra 11.2.1 requires JDK 21:
+
+```bash
+sudo apt install openjdk-21-jdk -y
+```
+
+### 2. Download Ghidra 11.2.1
+
+Download the Ghidra 11.2.1 release in /opt folder:
+
+```bash
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.2.1_build/ghidra_11.2.1_PUBLIC_20241105.zip
+```
+
+Unzip the archive:
+
+```bash
+unzip ghidra_11.2.1_PUBLIC_20241105.zip
+```
+
+### 3. Download and Install the Blackfyre Plugin for Ghidra
+
+Visit the following link for instructions and to download the Blackfyre plugin for Ghidra:
+
+* [Blackfyre Ghidra Plugin v1.0.1 Release and Installation Instructions](https://github.com/jonescyber-ai/Blackfyre/releases/tag/v1.0.1)
+
+Follow the installation instructions provided in the release notes to add the plugin to your Ghidra installation.
+
+
+
+---
+
 ## Additional Notes
 
 * Ensure all commands are run from the appropriate directories as indicated.

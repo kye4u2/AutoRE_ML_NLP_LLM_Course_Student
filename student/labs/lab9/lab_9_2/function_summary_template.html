@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Summary</title>
+</head>
+<body>
+    <h1>Function Summary</h1>
+    <p><strong>Binary Name:</strong> {{ summary_data.binary_name }}</p>
+    <p><strong>Binary Hash:</strong> {{ summary_data.binary_hash }}</p>
+    <p><strong>Function Name:</strong> {{ summary_data.function_name }}</p>
+    <p><strong>Address:</strong> 0x{{ summary_data.function_start_address }}</p>
+    <p><strong>Decompiled Code:</strong> <pre>{{ summary_data.decompiled_code }}</pre></p>
+    <p><strong>Summary:</strong> {{ summary_data.summary }}</p>
+    <p><strong>Predicted Function:</strong> {{ summary_data.predicted_function }}</p>
+    <p><strong>Reason for Prediction:</strong> {{ summary_data.reason_for_prediction }}</p>
+    <p><strong>Confidence:</strong> {{ summary_data.confidence }}</p>
+</body>
+</html>

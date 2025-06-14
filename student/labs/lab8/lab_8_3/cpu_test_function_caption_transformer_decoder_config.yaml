@@ -1,0 +1,44 @@
+# default_config.yaml
+
+# Path to the training dataset file. Use null to use the default training data.
+train_data_folder_path: null
+
+# Batch size for training.
+batch_size: 8
+
+# Number of training epochs.
+epochs: 2
+
+# Learning rate.
+lr: 0.0001
+
+# Vocabulary size. if 0, the vocabulary size will be the number of unique words in the training dataset.
+max_vocab_size: 100
+
+# Number of attention heads.
+nhead: 2
+
+# Number of transformer decoder layers.
+num_layers: 4
+
+# Dropout rate.
+dropout: 0.1
+
+# Maximum caption length (including <SOS> and <EOS> tokens).
+seq_len: 7
+
+
+# Directory where the best model will be saved.
+save_dir: "./checkpoints"
+
+# Seed for reproducibility.
+seed: 42
+
+# Max size of the dataset
+max_dataset_size: 1000
+
+# Minimum token length.
+min_token_length: 3
+
+# Min tokens in caption
+min_tokens_in_caption: 2

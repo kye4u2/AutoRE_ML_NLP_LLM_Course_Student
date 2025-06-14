@@ -1,7 +1,3 @@
-Certainly. Here is the updated section with clear guidance that step 5 (Python 3.10 installation) is only needed if Python 3.10 is not already installed on your system:
-
----
-
 # AutoRE\_ML\_NLP\_LLM\_Course\_Student
 
 ## Lab Environment Setup

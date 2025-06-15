@@ -87,30 +87,7 @@ git clone https://github.com/jonescyber-ai/Blackfyre
 
 ---
 
-### 4. Enter the `student` Folder
-
-Change into the `student` subdirectory (already present in this repo):
-
-```bash
-cd student
-```
-
----
-
-### 5. Create Required Symlinks
-
-Within the `student` directory, create the following symbolic links:
-
-```bash
-ln -s ../env/ .
-ln -s ../lab_common/ .
-ln -s ../lab_datasets/ .
-ln -s ../Blackfyre/ .
-```
-
----
-
-### 6. (If Needed) Install Python 3.10
+### 4. (If Needed) Install Python 3.10
 
 > **Skip this step if Python 3.10 is already installed on your system.**
 > The Tensor version used requires Python 3.10.
@@ -123,7 +100,7 @@ sudo apt install python3.10 python3.10-venv python3.10-dev
 
 ---
 
-### 7. Create and Activate Virtual Environment (in `student` folder)
+### 5. Create and Activate Virtual Environment (in `student` folder)
 
 In the `student` directory, create and activate the virtual environment:
 
@@ -134,7 +111,7 @@ source venv/bin/activate
 
 ---
 
-### 8. Install Python Dependencies
+### 6. Install Python Dependencies
 
 With the virtual environment activated, install requirements:
 
@@ -144,7 +121,7 @@ pip install -r env/requirements.txt
 
 ---
 
-### 9. Install Blackfyre as an Editable Package
+### 7. Install Blackfyre as an Editable Package
 
 Navigate to the Blackfyre source directory and install in editable mode:
 
@@ -156,7 +133,7 @@ pip install -e .
 
 ---
 
-### 10. Set Script Permissions
+### 8. Set Script Permissions
 
 Make the Ghidra example script executable:
 

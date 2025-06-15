@@ -11,7 +11,7 @@ RUN apt-get update \
       python3-pip \
       git-lfs \
       apt-transport-https \
-      ssh \
+      ssh gpg \
  && rm -rf /var/lib/apt/lists/*
 
 #Install Adoptium to bring down jdk 21
@@ -36,7 +36,7 @@ RUN mkdir -p /opt \
 ENV GHIDRA_HOME=/opt/ghidra_11.2.1_PUBLIC_20241105 \
     PATH="$GHIDRA_HOME:$PATH"
 
-RUN wget -q -O /opt/ghidra_11.2.1_PUBLIC_20250111_Blackfyre.zip /opt/https://github.com/jonescyber-ai/Blackfyre/releases/download/v1.0.1/ghidra_11.2.1_PUBLIC_20250111_Blackfyre.zip
+RUN wget -q -O /opt/ghidra_11.2.1_PUBLIC_20250111_Blackfyre.zip https://github.com/jonescyber-ai/Blackfyre/releases/download/v1.0.1/ghidra_11.2.1_PUBLIC_20250111_Blackfyre.zip
 
 # Default command to run when starting the container (optional, customize as needed)
 CMD ["/bin/bash"]

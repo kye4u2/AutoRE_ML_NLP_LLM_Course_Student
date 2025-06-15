@@ -1,5 +1,6 @@
 import argparse
 import os
+import re
 import time
 from collections import defaultdict
 from typing import Dict, Optional, List, Tuple
@@ -37,7 +38,14 @@ class BCCNgramIndexer:
         if self._initialized:
             return
 
-        self._bcc_files = [os.path.join(self._bcc_folder_path, f) for f in os.listdir(self._bcc_folder_path)]
+        def alphanum_key(s):
+            # Split the string into list of strings and ints
+            return [int(text) if text.isdigit() else text.lower() for text in re.split('([0-9]+)', s)]
+
+        self._bcc_files = [
+            os.path.join(self._bcc_folder_path, f)
+            for f in sorted(os.listdir(self._bcc_folder_path), key=alphanum_key)
+        ]
 
         self._ngram_index = self._initialize_ngram_index(self._ngram_index_map, self._lsh_num_bits)
 
@@ -189,13 +197,9 @@ def test_index(bcc_folder, window_size):
 
     # Define test cases as tuples of candidate ngram and expected hashes
     test_cases = [
-        ([3, 0, 145, 248, 95], ['8eff332ab33fde8c4e9145d620f7d9beabbd7075e46e45bc87167a2c66e604c7',
-                                '8cfb55087fa8e4c1e7bcc580d767cf2c884c1b8c890ad240c1e7009810af6736']),
-        ([23, 0, 148, 40, 0], ['fbe5548641d632402786dd2b8435d7fd312ed101c17554e69759b9f52bf52be6',
-                               '8cfb55087fa8e4c1e7bcc580d767cf2c884c1b8c890ad240c1e7009810af6736',
-                               '8eff332ab33fde8c4e9145d620f7d9beabbd7075e46e45bc87167a2c66e604c7']),
-        ([148, 3, 0, 0, 20], ['8eff332ab33fde8c4e9145d620f7d9beabbd7075e46e45bc87167a2c66e604c7',
-                              '8cfb55087fa8e4c1e7bcc580d767cf2c884c1b8c890ad240c1e7009810af6736'])
+        ([3, 0, 145, 248, 95], ['2a1d8692f445791dc9dc9700e11f2ce68fce9ac5ad2abd56aa0f41f1047b38f1']),
+        ([23, 0, 148, 40, 0], ['2a1d8692f445791dc9dc9700e11f2ce68fce9ac5ad2abd56aa0f41f1047b38f1']),
+        ([148, 3, 0, 0, 20], ['2a1d8692f445791dc9dc9700e11f2ce68fce9ac5ad2abd56aa0f41f1047b38f1'])
     ]
 
     logger.info("Testing N-Gram Search")

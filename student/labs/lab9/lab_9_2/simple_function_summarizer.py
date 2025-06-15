@@ -109,6 +109,8 @@ def summarize_function(vex_function_context, vex_binary_context)-> FunctionSumma
          3. (Done for you) Parse the response from the large language model and return a FunctionSummary object
             containing the summary information.
     """
+
+    SUMMARY_INSTRUCTION = ""
     ### YOUR CODE HERE ###
 
 

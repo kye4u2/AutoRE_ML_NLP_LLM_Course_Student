@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainer.schema.json",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "password": "vscode",
+        "webPort": "6080",
+        "vncPort": "5901"
+    }
+  },
+  "containerEnv": { "PYTHONUNBUFFERED": "1" },
+  "postCreateCommand": "./.devcontainer/postCreate.sh",
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "jonescyber-ai/Blackfyre": {
+          "permissions": "read-all"
+        }
+      }
+    },
+		"vscode": {
+			"extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.isort"
+      ]
+		}
+  },
+  "forwardPorts": [6080, 7860],
+  "portsAttributes": {
+    "6080": {
+      "label": "desktop"
+    }
+  },
+  "updateContentCommand": "./.devcontainer/updateContent.sh"
+}

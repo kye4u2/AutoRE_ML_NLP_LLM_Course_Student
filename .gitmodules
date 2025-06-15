@@ -1,0 +1,3 @@
+[submodule "Blackfyre"]
+	path = Blackfyre
+	url = git@github.com:jonescyber-ai/Blackfyre.git

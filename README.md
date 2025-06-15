@@ -12,7 +12,49 @@ This repository provides the environment and instructions necessary for the hand
 
 ---
 
-### 1. Download and Verify the Dataset
+### 1. Obtain and Prepare the Repository in `/opt`
+
+All commands and instructions in this guide assume the **root folder** for the repository is:
+
+```
+/opt/AutoRE_ML_NLP_LLM_Course/
+```
+
+By default, the repository folder is named `AutoRE_ML_NLP_LLM_Course_Student` after cloning or unzipping.
+**You must rename or move this folder to `/opt/AutoRE_ML_NLP_LLM_Course/`.**
+Follow one of the methods below:
+
+#### **A. Clone the Repository**
+
+```bash
+cd /opt
+sudo git clone https://github.com/kye4u2/AutoRE_ML_NLP_LLM_Course_Student.git
+sudo mv AutoRE_ML_NLP_LLM_Course_Student AutoRE_ML_NLP_LLM_Course
+sudo chown -R "$USER":"$USER" /opt/AutoRE_ML_NLP_LLM_Course/
+cd /opt/AutoRE_ML_NLP_LLM_Course/
+```
+
+#### **B. Download and Unzip the Repository ZIP**
+
+```bash
+cd /opt
+sudo unzip /path/to/AutoRE_ML_NLP_LLM_Course_Student.zip
+sudo mv AutoRE_ML_NLP_LLM_Course_Student AutoRE_ML_NLP_LLM_Course
+sudo chown -R "$USER":"$USER" /opt/AutoRE_ML_NLP_LLM_Course/
+cd /opt/AutoRE_ML_NLP_LLM_Course/
+```
+
+Replace `/path/to/AutoRE_ML_NLP_LLM_Course_Student.zip` with the actual path to your downloaded ZIP file.
+
+**All subsequent commands should be run from this directory unless otherwise specified.**
+
+---
+
+*Continue with the rest of the setup steps as written, starting from Step 2 (downloading and verifying the dataset).*
+
+
+
+### 2. Download and Verify the Dataset
 
 From the **root folder** of the repository, run the following commands to download and verify the dataset:
 
@@ -35,7 +77,7 @@ unzip lab_datasets-v2.zip
 
 ---
 
-### 2. Clone the Blackfyre Repository
+### 3. Clone the Blackfyre Repository
 
 From the **root folder**, run:
 
@@ -45,7 +87,7 @@ git clone https://github.com/jonescyber-ai/Blackfyre
 
 ---
 
-### 3. Enter the `student` Folder
+### 4. Enter the `student` Folder
 
 Change into the `student` subdirectory (already present in this repo):
 
@@ -55,7 +97,7 @@ cd student
 
 ---
 
-### 4. Create Required Symlinks
+### 5. Create Required Symlinks
 
 Within the `student` directory, create the following symbolic links:
 
@@ -68,7 +110,7 @@ ln -s ../Blackfyre/ .
 
 ---
 
-### 5. (If Needed) Install Python 3.10
+### 6. (If Needed) Install Python 3.10
 
 > **Skip this step if Python 3.10 is already installed on your system.**
 > The Tensor version used requires Python 3.10.
@@ -81,7 +123,7 @@ sudo apt install python3.10 python3.10-venv python3.10-dev
 
 ---
 
-### 6. Create and Activate Virtual Environment (in `student` folder)
+### 7. Create and Activate Virtual Environment (in `student` folder)
 
 In the `student` directory, create and activate the virtual environment:
 
@@ -92,7 +134,7 @@ source venv/bin/activate
 
 ---
 
-### 7. Install Python Dependencies
+### 8. Install Python Dependencies
 
 With the virtual environment activated, install requirements:
 
@@ -102,7 +144,7 @@ pip install -r env/requirements.txt
 
 ---
 
-### 8. Install Blackfyre as an Editable Package
+### 9. Install Blackfyre as an Editable Package
 
 Navigate to the Blackfyre source directory and install in editable mode:
 
@@ -114,7 +156,7 @@ pip install -e .
 
 ---
 
-### 9. Set Script Permissions
+### 10. Set Script Permissions
 
 Make the Ghidra example script executable:
 

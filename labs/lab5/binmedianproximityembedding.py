@@ -24,7 +24,7 @@ logging.getLogger("binarycontext").setLevel(logging.WARN)
 
 DEFAULT_TEST_BCC_FILE_PATH = os.path.join(ROOT_PROJECT_FOLDER_PATH,
                                           "lab_datasets",
-                                          "lab6",
+                                          "lab5",
                                           "benign",
                                           "3f1bfc4be00fa0c07778a986e81bf21453ba45f76fecd261d7_3f1bfc4be00fa0c07778a986e81bf21453ba45f76fecd261d7e88e7db76a15a1.bcc")
 

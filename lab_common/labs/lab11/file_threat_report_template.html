@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Threat Analysis Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h2 { color: navy; }
+        p { margin: 5px 0; }
+        .section { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>File Threat Analysis Report</h1>
+
+    <!-- File Information -->
+    <div class="section">
+        <h2>File Information</h2>
+        <p><strong>Meaningful Names:</strong> {{ file_info.meaningful_name }}</p>
+        <p><strong>Names:</strong> {{ file_info.names }}</p>
+        <p><strong>Type:</strong> {{ file_info.type }}</p>
+        <p><strong>Size:</strong> {{ file_info.size }} bytes</p>
+        <p><strong>First Seen ITW Date:</strong> {{ file_info.first_seen_itw_date }}</p>
+        <p><strong>First Submitted Date:</strong> {{ file_info.first_submission_date }}</p>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="section">
+        <h2>Executive Summary</h2>
+        <p>{{ summary_data.executive_summary }}</p>
+    </div>
+
+    <!-- API Call Trace Summary -->
+    <div class="section">
+        <h2>API Call Trace Summary</h2>
+        <p>{{ summary_data.api_call_trace_summary }}</p>
+    </div>
+
+    <!-- CrowdSource IDS Summary -->
+    <div class="section">
+        <h2>CrowdSource IDS Summary</h2>
+        <p>{{ summary_data.crowd_sourced_ids_summary }}</p>
+    </div>
+
+    <!-- Scan Result Summary -->
+    <div class="section">
+        <h2>Scan Result Summary</h2>
+        <p>{{ summary_data.scan_results_summary }}</p>
+    </div>
+
+</body>
+</html>
